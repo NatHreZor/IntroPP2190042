@@ -1,0 +1,25 @@
+A continuación el pseudo-código del método 2(el método más eficaz)
+
+Inicio
+    Leer N desde el usuario
+    Si N <= 0
+        Imprimir "El número de términos debe ser positivo."
+        Terminar el programa con un código de error
+    Fin Si
+
+    Crear un arreglo fib de tamaño N
+    fib[0] = 0
+    fib[1] = 1
+
+    Para i desde 2 hasta N-1
+        fib[i] = fib[i-1] + fib[i-2]
+    Fin Para
+
+    Inicializar suma a 0
+
+    Para i desde 0 hasta N-1, con paso 2
+        suma = suma + fib[i]
+    Fin Para
+
+    Imprimir "La suma de los números de Fibonacci en índices pares hasta el término N es:", suma
+Fin
